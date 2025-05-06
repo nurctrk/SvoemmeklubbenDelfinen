@@ -6,9 +6,10 @@ public class Medlemmer {
     private String disciplin;
     private String medlemstype;  // f.eks. Junior / Senior
     private String aktivitet;    // Aktiv / Passiv
+    private String restance;
 
     public Medlemmer(String navn, int alder, String email, String telefonnummer,
-                  String disciplin, String medlemstype, String aktivitet) {
+                  String disciplin, String medlemstype, String aktivitet, String restance) {
         this.navn = navn;
         this.alder = alder;
         this.email = email;
@@ -16,6 +17,8 @@ public class Medlemmer {
         this.disciplin = disciplin;
         this.medlemstype = medlemstype;
         this.aktivitet = aktivitet;
+        this.restance = i restance;
+
     }
 
     // Gettere
