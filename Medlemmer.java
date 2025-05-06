@@ -17,7 +17,7 @@ public class Medlemmer {
         this.disciplin = disciplin;
         this.medlemstype = medlemstype;
         this.aktivitet = aktivitet;
-        this.restance = i restance;
+        this.restance = restance;
 
     }
 
@@ -29,4 +29,5 @@ public class Medlemmer {
     public String getDisciplin() { return disciplin; }
     public String getMedlemstype() { return medlemstype; }
     public String getAktivitet() { return aktivitet; }
+    public String getRestance(){return restance;}
 }
