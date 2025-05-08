@@ -8,6 +8,6 @@ Navne:
 - Zakaria
 - Amin
 - Gurkamal
-- Muhammad Younes
+- M. Younas
 - Christoffer
 
