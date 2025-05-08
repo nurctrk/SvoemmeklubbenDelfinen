@@ -21,4 +21,26 @@ class MedlemsListe {
     public ArrayList<Medlemmer> getSvoemmere() {
         return svoemmere;
     }
+
+    public ArrayList<Medlemmer> getKonkurrenceSvoemmere() {
+        ArrayList<Medlemmer> konkurrenceSvoemmere = new ArrayList<>();
+        for (Medlemmer m : svoemmere) {
+            if (m.isKonkurrenceSvoemmer()) {
+                konkurrenceSvoemmere.add(m);
+            }
+        }
+        return konkurrenceSvoemmere;
+    }
+
+    public ArrayList<Medlemmer> findMedlemmerEfterAlderOgDisciplin(String aldersgruppe, String disciplin) {
+        ArrayList<Medlemmer> resultat = new ArrayList<>();
+        for (Medlemmer m : svoemmere) {
+            if (m.isKonkurrenceSvoemmer() &&
+                    m.getMedlemstype().equalsIgnoreCase(aldersgruppe) &&
+                    m.getDisciplin().equalsIgnoreCase(disciplin)) {
+                resultat.add(m);
+            }
+        }
+        return resultat;
+    }
 }
