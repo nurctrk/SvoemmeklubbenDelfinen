@@ -14,4 +14,5 @@ public class TræningsResultater {
     public String getDisciplin() { return disciplin; }
     public double getTid() { return tid; }
     public Date getDato() { return dato; }
+    
 }
