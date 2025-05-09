@@ -43,4 +43,11 @@ class MedlemsListe {
         }
         return resultat;
     }
+    public void udskrivAlleMedlemmer() {
+        for (Medlemmer medlem : svoemmere) {
+            System.out.println(medlem);  // Forudsat at Medlemmer har en toString()-metode
+        }
+    }
 }
+
+
