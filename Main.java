@@ -6,8 +6,7 @@ public class Main {
         try {
             // Opret et nyt Menu objekt
             Menu menu = new Menu();
-
-
+            menu.start(); // Start the menu system
 
         } catch (Exception e) {
             // Hvis der opstår en fejl, vis den
