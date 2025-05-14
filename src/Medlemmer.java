@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Medlemmer {
     private String navn;
@@ -11,8 +10,6 @@ public class Medlemmer {
     private String aktivitet;    // Aktiv / Passiv
     private String restance;
     private boolean konkurrenceSvoemmer;
-    private ArrayList<TræningsResultater> traeningsResultater = new ArrayList<>();
-    private ArrayList<Konkurrenceresultat> konkurrenceresultater = new ArrayList<>();
 
     public Medlemmer(String navn, int alder, String email, String telefonnummer,
                      String disciplin, String medlemstype, String aktivitet, String restance) {
@@ -24,19 +21,42 @@ public class Medlemmer {
         this.medlemstype = medlemstype;
         this.aktivitet = aktivitet;
         this.restance = restance;
+        this.konkurrenceSvoemmer = false; // Default value
     }
 
-    // Gettere
-    public String getNavn() { return navn; }
-    public int getAlder() { return alder; }
-    public String getEmail() { return email; }
-    public String getTelefonnummer() { return telefonnummer; }
-    public String getDisciplin() { return disciplin; }
-    public String getMedlemstype() { return medlemstype; }
-    public String getAktivitet() { return aktivitet; }
-    public String getRestance() { return restance; }
+    // Gettere og settere
+    public String getNavn() {
+        return navn;
+    }
 
-    // Settere
+    public int getAlder() {
+        return alder;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getTelefonnummer() {
+        return telefonnummer;
+    }
+
+    public String getDisciplin() {
+        return disciplin;
+    }
+
+    public String getMedlemstype() {
+        return medlemstype;
+    }
+
+    public String getAktivitet() {
+        return aktivitet;
+    }
+
+    public String getRestance() {
+        return restance;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -55,22 +75,6 @@ public class Medlemmer {
 
     public boolean isKonkurrenceSvoemmer() {
         return konkurrenceSvoemmer;
-    }
-
-    public void tilfoejTraeningsResultat(TræningsResultater resultat) {
-        traeningsResultater.add(resultat);
-    }
-
-    public void tilfoejKonkurrenceresultat(Konkurrenceresultat resultat) {
-        konkurrenceresultater.add(resultat);
-    }
-
-    public ArrayList<TræningsResultater> getTraeningsResultater() {
-        return traeningsResultater;
-    }
-
-    public ArrayList<Konkurrenceresultat> getKonkurrenceresultat() {
-        return konkurrenceresultater;
     }
 
     @Override

@@ -1,11 +1,14 @@
+package src;
+
 import java.util.ArrayList;
 
-class MedlemsListe {
-    private ArrayList<Medlemmer> svoemmere;
+public class MedlemsListe {
+    private ArrayList<MedlemsListe> svoemmere;
 
     public MedlemsListe() {
         this.svoemmere = new ArrayList<>();
 
+        // Tilføj medlemmer til listen
         svoemmere.add(new Medlemmer("Mads Jensen", 16, "madsjensen@mail.dk", "123456789", "Crawl", "Junior", "Aktiv", "er i restance"));
         svoemmere.add(new Medlemmer("Emma Sørensen", 17, "emma@mail.dk", "123456780", "Rygcrawl", "Junior", "Aktiv", "ej i restance"));
         svoemmere.add(new Medlemmer("Anton Larsen", 18, "anton@mail.dk", "123456781", "Butterfly", "Senior", "Aktiv", "ej i restance"));
@@ -18,10 +21,12 @@ class MedlemsListe {
         svoemmere.add(new Medlemmer("Louise Bækgaard", 17, "louise@mail.dk", "123456788", "Crawl", "Junior", "Aktiv", "er i restance"));
     }
 
+    // Hent alle medlemmer
     public ArrayList<Medlemmer> getSvoemmere() {
         return svoemmere;
     }
 
+    // Hent medlemmer, der er konkurrence-svømmere
     public ArrayList<Medlemmer> getKonkurrenceSvoemmere() {
         ArrayList<Medlemmer> konkurrenceSvoemmere = new ArrayList<>();
         for (Medlemmer m : svoemmere) {
@@ -32,6 +37,7 @@ class MedlemsListe {
         return konkurrenceSvoemmere;
     }
 
+    // Find medlemmer efter alder og disciplin
     public ArrayList<Medlemmer> findMedlemmerEfterAlderOgDisciplin(String aldersgruppe, String disciplin) {
         ArrayList<Medlemmer> resultat = new ArrayList<>();
         for (Medlemmer m : svoemmere) {
@@ -43,11 +49,11 @@ class MedlemsListe {
         }
         return resultat;
     }
+
+    // Udskriv alle medlemmer
     public void udskrivAlleMedlemmer() {
         for (Medlemmer medlem : svoemmere) {
             System.out.println(medlem);  // Forudsat at Medlemmer har en toString()-metode
         }
     }
 }
-
-
